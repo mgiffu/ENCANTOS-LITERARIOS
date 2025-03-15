@@ -44,7 +44,21 @@
   --tag: .625rem;
 }
 
-@media (width >= 80em) {
+body { 
+  background: var(--shape-background);
+  font-family: var(--ff-base);
+  color: var(--text-body);
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  font-size: var(--link);
+  font-weight: 500;
+}
+
+
+@media (width >= 90em) {
   :root {
     /* FONTES */
     --title-lg: 3rem;
