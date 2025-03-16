@@ -28,8 +28,8 @@
 
     & .logo {
       background-image: url(../assets/logo-symbol.svg);
-      width: 3.625rem;
-      height: 2.3125rem;
+      width: 4rem;
+      height: 3rem;
       background-size: cover;
     }
 
@@ -60,6 +60,12 @@
 
     & .header {
       padding: 3.5rem 10rem 10.25rem;
+
+      & .logo {
+        background-image: url(../assets/logo-horizontal.svg);
+        width: 14.375rem;
+        height: 3.625rem;
+      }
     }
 
     & .title {
