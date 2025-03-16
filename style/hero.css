@@ -13,6 +13,9 @@
       background-repeat: no-repeat;
       z-index: -1;
       position: absolute;
+      opacity: 0;
+      animation: appear-title 2s ease forwards;
+
     }
   }
 
@@ -34,6 +37,8 @@
   & .title {
     text-align: center;
     padding-inline: 1.25rem;
+    opacity: 0;
+    animation: appear-title 2s ease forwards;
 
     & h1 {
       margin-bottom: 1rem;
@@ -64,5 +69,19 @@
         margin-bottom: 2rem;
       }
     }
+  }
+}
+
+@keyframes appear-title {
+  0%, 33.33% {
+    opacity: 0;
+  }
+
+  33.33%, 66.66% {
+    opacity: 0.5;
+  }
+
+  66.66%, 100% {
+    opacity: 1;
   }
 }
