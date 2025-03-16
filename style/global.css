@@ -46,8 +46,14 @@
 
 body { 
   background: var(--shape-background);
+  position: relative;
   font-family: var(--ff-base);
   color: var(--text-body);
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 a {
