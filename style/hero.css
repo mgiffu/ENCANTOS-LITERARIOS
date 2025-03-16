@@ -1,0 +1,68 @@
+.hero {
+  & .content {
+    width: 23.4375rem;
+    height: 29rem;
+    position: relative;
+
+    & .main-animation {
+      background-image: url(../assets/hero/book-hero-mobile.svg);
+      width: inherit;
+      height: inherit;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.25rem 1.25rem 3rem;
+
+    & .logo {
+      background-image: url(../assets/logo-symbol.svg);
+      width: 3.625rem;
+      height: 2.3125rem;
+      background-size: cover;
+    }
+
+  }
+  & .title {
+    text-align: center;
+    padding-inline: 1.25rem;
+
+    & h1 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (width >= 90em) {
+  .hero {
+    & .content {
+      width: 90rem;
+      height: 59.25rem;
+      position: relative;
+  
+      & .main-animation {
+        background-image: url(../assets/hero/book-hero-desk.svg);
+      }
+    }
+
+    & .header {
+      padding: 3.5rem 10rem 10.25rem;
+    }
+
+    & .title {
+      padding-inline: 24.5rem;
+
+      & h1 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
