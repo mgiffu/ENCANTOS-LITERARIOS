@@ -32,8 +32,8 @@
       height: 3rem;
       background-size: cover;
     }
-
   }
+
   & .title {
     text-align: center;
     padding-inline: 1.25rem;
@@ -42,6 +42,97 @@
 
     & h1 {
       margin-bottom: 1rem;
+    }
+  }
+
+  & .month-info {
+    text-align: center;
+    color: rgba(226, 231, 233, 0.5);
+    padding: 5rem 1.25rem;
+    position: relative;
+
+    &:hover{
+      & .first {
+        color: var(--text-body);
+        & strong {
+          color: var(--blue-light);
+        }
+      }
+
+      & .second {
+        color: var(--text-body);
+        transition-delay: 500ms;
+        & strong {
+          color: var(--blue-light);
+          transition-delay: 500ms;
+        }
+      }
+
+      & .third {
+        color: var(--text-body);
+        transition-delay: 1s;
+        & strong {
+          color: var(--blue-light);
+          transition-delay: 1s;
+        }
+      }
+
+      & .spellbook {
+        opacity: 1;
+        &:hover {
+          scale: 1.1;
+          rotate: 5deg;
+        }
+      }
+
+      & .ouija {
+        opacity: 1;
+        transition-delay: 500ms;
+        &:hover {
+          transition-delay: 0ms;
+          scale: 1.1;
+          rotate: 5deg;
+        }
+      }
+
+      & .crystal-ball {
+        opacity: 1;
+        transition-delay: 1s;
+        &:hover {
+          transition-delay: 0ms;
+          scale: 1.1;
+          rotate: 5deg;
+        }
+      }
+
+    }
+
+    & .spellbook {
+      position: absolute;
+      top: 13%;
+      right: 22%;
+      opacity: 0;
+
+      transition: opacity 500ms, scale 350ms, rotate 350ms;
+    }
+
+    & .ouija {
+      position: absolute;
+      top: 62%;
+      transform: rotate(99deg);
+      opacity: 0;
+
+      transition: opacity 500ms, scale 350ms 0ms, rotate 350ms 0ms;
+    }
+
+    & .crystal-ball {
+      position: absolute;
+      top: 65%;
+      right: 10%;
+      transform: rotate(-15deg);
+      opacity: 0;
+
+      transition: opacity 500ms, scale 350ms, rotate 350ms;
     }
   }
 }
@@ -75,6 +166,32 @@
         margin-bottom: 2rem;
       }
     }
+
+    & .month-info {
+      width: 75rem;
+      height: 25rem;
+      margin: 6rem 7.5rem 5rem;
+
+      & .spellbook {
+        position: absolute;
+        top: -1%;
+        right: 50%;
+      }
+  
+      & .ouija {
+        position: absolute;
+        top: 53%;
+        left: 5%;
+        transform: rotate(99deg);
+      }
+  
+      & .crystal-ball {
+        position: absolute;
+        top: 53%;
+        right: 0%;
+        transform: rotate(-15deg);
+      }
+    }
   }
 }
 
@@ -91,3 +208,4 @@
     opacity: 1;
   }
 }
+

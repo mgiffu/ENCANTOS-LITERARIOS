@@ -3,10 +3,31 @@ h1 {
   color: var(--text-title);
 }
 
+h2 {
+  font-size: var(--subtitle);
+  font-weight: 500;
+  line-height: 200%;
+}
+
 h3 {
   font-size: var(--body-lg);
   font-weight: 500;
   line-height: 140%;
+}
+
+.spellbook {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.ouija {
+  width: 2rem;
+  height: 2rem;
+}
+
+.crystal-ball {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .button-one {
@@ -35,5 +56,23 @@ h3 {
 
   &:hover::before {
     transform: scaleX(1);
+  }
+}
+
+
+@media (width >= 90em) {
+  .spellbook {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  
+  .ouija {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .crystal-ball {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
