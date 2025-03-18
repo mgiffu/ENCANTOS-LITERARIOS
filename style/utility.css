@@ -15,6 +15,12 @@ h3 {
   line-height: 140%;
 }
 
+h4 {
+  font-size: var(--title-sm);
+  font-weight: 700;
+  line-height: 140%;
+}
+
 .spellbook {
   width: 2.5rem;
   height: 2.5rem;

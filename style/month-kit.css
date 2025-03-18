@@ -1,0 +1,42 @@
+.month-kit {
+  max-width: 23.4375rem;
+  margin-inline: auto;
+  text-align: center;
+
+  & p {
+    font-size: var(--body-md);
+    line-height: 140%;
+    padding-bottom: 4rem;
+  }
+  
+  & .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.5rem;
+
+    & img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media (width >= 90em) {
+  .month-kit {
+    max-width: 90em;
+
+    & p {
+      padding-bottom: 5.5rem;
+    }
+
+    & .head {
+      margin-top: 14.6875rem;
+
+      & img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+}

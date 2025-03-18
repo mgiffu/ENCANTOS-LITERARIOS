@@ -3,6 +3,8 @@
     width: 23.4375rem;
     height: 29rem;
     position: relative;
+    margin-inline: auto;
+    
 
     & .main-animation {
       background-image: url(../assets/hero/book-hero-mobile.svg);
@@ -46,10 +48,12 @@
   }
 
   & .month-info {
+    max-width: 23.4375rem;
     text-align: center;
     color: rgba(226, 231, 233, 0.5);
     padding: 5rem 1.25rem;
     position: relative;
+    margin-inline: auto;
 
     &:hover{
       & .first {
@@ -168,9 +172,11 @@
     }
 
     & .month-info {
+      max-width: 90rem;
       width: 75rem;
       height: 25rem;
       margin: 6rem 7.5rem 5rem;
+      margin-inline: auto;
 
       & .spellbook {
         position: absolute;
