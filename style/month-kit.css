@@ -2,8 +2,6 @@
   max-width: 23.4375rem;
   margin-inline: auto;
   text-align: center;
-  
-  position: relative;
 
   & p {
     font-size: var(--body-md);
@@ -30,78 +28,30 @@
 
     & .book {
       position: absolute;
-        width: 9.824375rem;
+        max-width: 9.824375rem;
         height: auto; /* 12.98 */
         margin: 3.360625rem 8.121875rem 3.596875rem 5.49125rem;
     }
 
-    & .hardcover {
-      & .text-hardcover {
-        position: absolute;
-     
-        /* transform: translate(105%, 210%); */
-        /* margin-left: .65375rem;
-        margin-bottom: 0.706875rem; */
-      }
-
-      & .arrow-one {
-        position: absolute;
-        width: 3.67125rem;
-        height: auto;
-
-
-        /* transform: translate(160%, 250%); */
-        /* margin-left: 2.588125rem; */
-      }
-    }
-
-    & .pin {
+   & .bookmark{
+    & img[src*="bookmark"] {
       /* position: absolute; */
-
-      & .text-pin {
-        position: absolute;
-
-      }
-
-      & .arrow-tow {
-        position: absolute;
-        width: 2.205625rem;
-        height: auto;
-      }
-
-      & .pin-img {
-        position: absolute;
-        width: 4.680625rem;
-        height: auto;
-      }
+      width: 3.65rem;
+      height: auto;
     }
 
-    & .bookmark {
+    & img[src*="yellow"] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    & img[src*="purple"] {
       /* position: absolute; */
-
-      & .bookmark-yellow {
-        position: absolute;
-        width: 3.65rem;
-        height: auto;
-      }
-
-      & .bookmark-purple {
-        position: absolute;
-        width: 3.65rem;
-        height: auto;
-      }
-
-      & .arrow-three {
-        position: absolute;
-        width: 3.06rem;
-        height: auto;
-      }
-
-      & .text-bookmark {
-        position: absolute;
-
-      }
+      left: 20%;
+      top: 20%;
     }
+   }
   }
 }
 
