@@ -2,11 +2,12 @@
   max-width: 23.4375rem;
   margin-inline: auto;
   text-align: center;
+  
+  position: relative;
 
   & p {
     font-size: var(--body-md);
     line-height: 140%;
-    padding-bottom: 4rem;
   }
   
   & .head {
@@ -20,15 +21,93 @@
       height: 3rem;
     }
   }
+
+  & .kit-animation {
+    position: relative;
+    & p {
+      font-size: 0.625rem;
+    }
+
+    & .book {
+      position: absolute;
+        width: 9.824375rem;
+        height: auto; /* 12.98 */
+        margin: 3.360625rem 8.121875rem 3.596875rem 5.49125rem;
+    }
+
+    & .hardcover {
+      & .text-hardcover {
+        position: absolute;
+     
+        /* transform: translate(105%, 210%); */
+        /* margin-left: .65375rem;
+        margin-bottom: 0.706875rem; */
+      }
+
+      & .arrow-one {
+        position: absolute;
+        width: 3.67125rem;
+        height: auto;
+
+
+        /* transform: translate(160%, 250%); */
+        /* margin-left: 2.588125rem; */
+      }
+    }
+
+    & .pin {
+      /* position: absolute; */
+
+      & .text-pin {
+        position: absolute;
+
+      }
+
+      & .arrow-tow {
+        position: absolute;
+        width: 2.205625rem;
+        height: auto;
+      }
+
+      & .pin-img {
+        position: absolute;
+        width: 4.680625rem;
+        height: auto;
+      }
+    }
+
+    & .bookmark {
+      /* position: absolute; */
+
+      & .bookmark-yellow {
+        position: absolute;
+        width: 3.65rem;
+        height: auto;
+      }
+
+      & .bookmark-purple {
+        position: absolute;
+        width: 3.65rem;
+        height: auto;
+      }
+
+      & .arrow-three {
+        position: absolute;
+        width: 3.06rem;
+        height: auto;
+      }
+
+      & .text-bookmark {
+        position: absolute;
+
+      }
+    }
+  }
 }
 
 @media (width >= 90em) {
   .month-kit {
     max-width: 90em;
-
-    & p {
-      padding-bottom: 5.5rem;
-    }
 
     & .head {
       margin-top: 14.6875rem;
@@ -36,6 +115,20 @@
       & img {
         width: 5rem;
         height: 5rem;
+      }
+    }
+
+    & .kit-animation {
+      margin-inline: auto;
+
+      & p {
+        font-size: var(--body-md);
+      }
+      
+      & .book {
+          width: 29.1875rem;
+          height: auto; /* 38.5625 */
+          margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
       }
     }
   }
