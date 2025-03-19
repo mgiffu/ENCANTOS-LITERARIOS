@@ -33,27 +33,24 @@
         margin: 3.360625rem 8.121875rem 3.596875rem 5.49125rem;
     }
 
-   & .bookmark{
-    & img[src*="bookmark"] {
-      /* position: absolute; */
-      width: 3.65rem;
-      height: auto;
-    }
-
-    & img[src*="yellow"] {
+    & .bookmark-yellow {
       position: absolute;
+      width: 3.65rem;
+      height: 11.3075rem;
       top: 50%;
       left: 50%;
     }
 
-    & img[src*="purple"] {
-      /* position: absolute; */
+    & .bookmark-purple {
+      position: absolute;
+      width: 3.65rem;
+      height: 11.3075rem;
       left: 20%;
       top: 20%;
     }
    }
-  }
-}
+ }
+
 
 @media (width >= 90em) {
   .month-kit {
@@ -76,7 +73,7 @@
       }
       
       & .book {
-          width: 29.1875rem;
+          max-width: 29.1875rem;
           height: auto; /* 38.5625 */
           margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
       }
