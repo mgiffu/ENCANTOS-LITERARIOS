@@ -22,6 +22,8 @@
 
   & .kit-animation {
     position: relative;
+    height: 19.9375rem;
+
     & p {
       font-size: 0.625rem;
     }
@@ -31,6 +33,9 @@
         max-width: 9.824375rem;
         height: auto; /* 12.98 */
         margin: 3.360625rem 8.121875rem 3.596875rem 5.49125rem;
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
     }
 
     & .bookmark-yellow {
@@ -38,15 +43,19 @@
       width: 3.65rem;
       height: 11.3075rem;
       top: 50%;
-      left: 50%;
+      left: 57%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
     }
 
     & .bookmark-purple {
       position: absolute;
       width: 3.65rem;
       height: 11.3075rem;
-      left: 20%;
-      top: 20%;
+      left: 57%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
     }
    }
  }
