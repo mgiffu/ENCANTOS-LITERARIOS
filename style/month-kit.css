@@ -106,6 +106,24 @@
       z-index: -2;
     }
 
+    & .arrow-hardcover {
+      position: absolute;
+      width: 3.67125rem;
+      height: .63125rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-120%, -600%);
+      z-index: -1;
+    }
+
+    & .text-hardcover {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-80%, -500%);
+      z-index: -1;
+    }
+
     &:hover {
       & .bookmark-yellow {
         animation: slideBkOne 500ms ease forwards;
@@ -133,6 +151,14 @@
 
       & .text-pin {
         animation: slidePinThree 500ms ease forwards;
+      }
+
+      & .arrow-hardcover {
+        animation: slideHcOne 500ms ease forwards;
+      }
+
+      & .text-hardcover {
+        animation: slideHcTow 500ms ease forwards;
       }
     }
    }
@@ -210,5 +236,17 @@
 @keyframes slidePinThree {
   to {
     transform: translate(-225%, 1150%);
+  }
+}
+
+@keyframes slideHcOne {
+  to {
+    transform: translate(-245%, -1100%);
+  }
+}
+
+@keyframes slideHcTow {
+  to {
+    transform: translate(-195%, -940%);
   }
 }
