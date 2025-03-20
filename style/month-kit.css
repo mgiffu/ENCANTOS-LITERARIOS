@@ -45,8 +45,8 @@
       top: 50%;
       left: 57%;
       transform: translate(-50%, -50%);
-      transition: slideBkOne;
       z-index: -1;
+      transition: transform 500ms ease, rotate 500ms ease;
     }
 
     & .bookmark-purple {
@@ -57,6 +57,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: -2;
+      transition: transform 500ms ease, rotate 500ms ease;
     }
 
     & .arrow-bookmark {
@@ -67,6 +68,7 @@
       top: 65%;
       transform: translate(-50%, -50%);
       z-index: -3;
+      transition: transform 500ms ease;
     }
 
     & .text-bookmark {
@@ -75,6 +77,7 @@
       top: 50%;
       transform: translate(-60%, 400%);
       z-index: -3;
+      transition: transform 500ms ease;
     }
 
     & .pin {
@@ -85,6 +88,7 @@
       right: 50%;
       transform: translate(-110%, 200%);
       z-index: -1;
+      transition: transform 500ms ease, rotate 500ms ease;
     }
 
     & .arrow-pin {
@@ -95,6 +99,7 @@
       top: 50%;
       transform: translate(-200%, 0%);
       z-index: -2;
+      transition: transform 500ms ease;
     }
 
     & .text-pin {
@@ -104,6 +109,7 @@
       right: 50%;
       transform: translate(-100%, 1100%);
       z-index: -2;
+      transition: transform 500ms ease;
     }
 
     & .arrow-hardcover {
@@ -114,6 +120,7 @@
       top: 50%;
       transform: translate(-120%, -600%);
       z-index: -1;
+      transition: transform 500ms ease;
     }
 
     & .text-hardcover {
@@ -122,43 +129,44 @@
       top: 50%;
       transform: translate(-80%, -500%);
       z-index: -1;
+      transition: transform 500ms ease;
     }
 
     &:hover {
       & .bookmark-yellow {
-        animation: slideBkOne 500ms ease forwards;
+        transform: translate(15%, -75%) rotate(11.72deg);
       }
 
       & .bookmark-purple {
-        animation: slideBkTow 500ms ease forwards;
+        transform: translate(70%, -50%) rotate(20deg);
       }
 
       & .arrow-bookmark {
-        animation: slideBkThree 500ms ease forwards;
+        transform: translate(80%, 45%);
       }
 
       & .text-bookmark {
-        animation: slideBkFour 500ms ease forwards;
+        transform: translate(10%, 950%);
       }
 
       & .pin {
-        animation: slidePinOne 500ms ease forwards;
+        transform: translate(-196%, 240%) rotate(-7.55deg);
       }
 
       & .arrow-pin {
-        animation: slidePinTow 500ms ease forwards;
+        transform: translate(-460%, 50%);
       }
 
       & .text-pin {
-        animation: slidePinThree 500ms ease forwards;
+        transform: translate(-225%, 1150%);
       }
 
       & .arrow-hardcover {
-        animation: slideHcOne 500ms ease forwards;
+        transform: translate(-245%, -1100%);
       }
 
       & .text-hardcover {
-        animation: slideHcTow 500ms ease forwards;
+        transform: translate(-195%, -940%);
       }
     }
    }
@@ -191,62 +199,5 @@
           margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
       }
     }
-  }
-}
-
-@keyframes slideBkOne {
-  to {
-    transform: translate(-30%, -75%);
-    rotate: 11.72deg;
-  }
-}
-
-@keyframes slideBkTow {
-  to {
-    transform: translate(10%, -60%);
-    rotate: 20deg;
-  }
-}
-
-@keyframes slideBkThree {
-  to {
-    transform: translate(85%, 25%);
-  }
-}
-
-@keyframes slideBkFour {
-  to {
-    transform: translate(10%, 875%);
-  }
-}
-
-@keyframes slidePinOne {
-  to {
-    transform: translate(-230%, 220%);
-    rotate: -7.55deg;
-  }
-}
-
-@keyframes slidePinTow {
-  to {
-    transform: translate(-460%, 50%);
-  }
-}
-
-@keyframes slidePinThree {
-  to {
-    transform: translate(-225%, 1150%);
-  }
-}
-
-@keyframes slideHcOne {
-  to {
-    transform: translate(-245%, -1100%);
-  }
-}
-
-@keyframes slideHcTow {
-  to {
-    transform: translate(-195%, -940%);
   }
 }
