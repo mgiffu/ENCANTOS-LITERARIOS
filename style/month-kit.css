@@ -55,7 +55,43 @@
       left: 57%;
       top: 50%;
       transform: translate(-50%, -50%);
-      z-index: -1;
+      z-index: -2;
+    }
+
+    & .arrow-bookmark {
+      position: absolute;
+      width: 3.06rem;
+      height: 3.75rem;
+      left: 55%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+      z-index: -3;
+    }
+
+    & .text-bookmark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-60%, 400%);
+      z-index: -3;
+    }
+
+    &:hover {
+      & .bookmark-yellow {
+        animation: slideRightOne 500ms ease forwards;
+      }
+
+      & .bookmark-purple {
+        animation: slideRightTow 500ms ease forwards;
+      }
+
+      & .arrow-bookmark {
+        animation: slideRightThree 500ms ease forwards;
+      }
+
+      & .text-bookmark {
+        animation: slideRightFour 500ms ease forwards;
+      }
     }
    }
  }
@@ -85,7 +121,34 @@
           max-width: 29.1875rem;
           height: auto; /* 38.5625 */
           margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
+          
       }
     }
+  }
+}
+
+@keyframes slideRightOne {
+  100% {
+    transform: translate(-30%, -75%);
+    rotate: 11.72deg;
+  }
+}
+
+@keyframes slideRightTow {
+  100% {
+    transform: translate(10%, -60%);
+    rotate: 20deg;
+  }
+}
+
+@keyframes slideRightThree {
+  100% {
+    transform: translate(85%, 25%);
+  }
+}
+
+@keyframes slideRightFour {
+  100% {
+    transform: translate(10%, 875%);
   }
 }
