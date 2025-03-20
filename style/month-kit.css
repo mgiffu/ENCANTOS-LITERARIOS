@@ -45,6 +45,7 @@
       top: 50%;
       left: 57%;
       transform: translate(-50%, -50%);
+      transition: slideBkOne;
       z-index: -1;
     }
 
@@ -76,21 +77,62 @@
       z-index: -3;
     }
 
+    & .pin {
+      position: absolute;
+      width: 4.680625rem;
+      height: 5.3375rem;
+      left: 50%;
+      right: 50%;
+      transform: translate(-110%, 200%);
+      z-index: -1;
+    }
+
+    & .arrow-pin {
+      position: absolute;
+      width: 2.205625rem;
+      height: 2.671875rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-200%, 0%);
+      z-index: -2;
+    }
+
+    & .text-pin {
+      position: absolute;
+      width: 5rem;
+      left: 50%;
+      right: 50%;
+      transform: translate(-100%, 1100%);
+      z-index: -2;
+    }
+
     &:hover {
       & .bookmark-yellow {
-        animation: slideRightOne 500ms ease forwards;
+        animation: slideBkOne 500ms ease forwards;
       }
 
       & .bookmark-purple {
-        animation: slideRightTow 500ms ease forwards;
+        animation: slideBkTow 500ms ease forwards;
       }
 
       & .arrow-bookmark {
-        animation: slideRightThree 500ms ease forwards;
+        animation: slideBkThree 500ms ease forwards;
       }
 
       & .text-bookmark {
-        animation: slideRightFour 500ms ease forwards;
+        animation: slideBkFour 500ms ease forwards;
+      }
+
+      & .pin {
+        animation: slidePinOne 500ms ease forwards;
+      }
+
+      & .arrow-pin {
+        animation: slidePinTow 500ms ease forwards;
+      }
+
+      & .text-pin {
+        animation: slidePinThree 500ms ease forwards;
       }
     }
    }
@@ -121,34 +163,52 @@
           max-width: 29.1875rem;
           height: auto; /* 38.5625 */
           margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
-          
       }
     }
   }
 }
 
-@keyframes slideRightOne {
-  100% {
+@keyframes slideBkOne {
+  to {
     transform: translate(-30%, -75%);
     rotate: 11.72deg;
   }
 }
 
-@keyframes slideRightTow {
-  100% {
+@keyframes slideBkTow {
+  to {
     transform: translate(10%, -60%);
     rotate: 20deg;
   }
 }
 
-@keyframes slideRightThree {
-  100% {
+@keyframes slideBkThree {
+  to {
     transform: translate(85%, 25%);
   }
 }
 
-@keyframes slideRightFour {
-  100% {
+@keyframes slideBkFour {
+  to {
     transform: translate(10%, 875%);
+  }
+}
+
+@keyframes slidePinOne {
+  to {
+    transform: translate(-230%, 220%);
+    rotate: -7.55deg;
+  }
+}
+
+@keyframes slidePinTow {
+  to {
+    transform: translate(-460%, 50%);
+  }
+}
+
+@keyframes slidePinThree {
+  to {
+    transform: translate(-225%, 1150%);
   }
 }
