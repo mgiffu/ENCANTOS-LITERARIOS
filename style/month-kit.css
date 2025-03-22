@@ -31,11 +31,8 @@
     & .book {
       position: absolute;
         max-width: 9.824375rem;
-        height: auto; /* 12.98 */
+        height: 12.98rem; /* 12.98 */
         margin: 3.360625rem 8.121875rem 3.596875rem 5.49125rem;
-        /* top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
     }
 
     & .bookmark-yellow {
@@ -188,6 +185,7 @@
 
     & .kit-animation {
       margin-inline: auto;
+      height: 57.5rem;
 
       & p {
         font-size: var(--body-md);
@@ -195,9 +193,88 @@
       
       & .book {
           max-width: 29.1875rem;
-          height: auto; /* 38.5625 */
+          height: 38.5625rem; /* 38.5625 */
           margin: 8.375rem 31.25rem 10.5625rem 29.5625rem;
+      }
+
+      & .bookmark-yellow {
+        width: 10.75rem;
+        height: 33.5rem;
+        top: 50%;
+        left: 59%;
+      }
+
+      & .bookmark-purple {
+        width: 10.75rem;
+        height: 33.5rem;
+        left: 58.5%;
+        top: 50%;
+      }
+
+      & .arrow-bookmark {
+        width: 9rem;
+        height: 8rem;
+        left: 58%;
+        top: 68%;
+      }
+
+      & .text-bookmark {
+        left: 59.7%;
+        top: 65.7%;
+      }
+
+      & .pin {
+        width: 13.8755rem;
+        height: 15.875rem;
+        left: 53.5%;
+        top: -4%;
+      }
+
+      & .arrow-pin {
+        width: 6.5rem;
+        height: 8rem;
+        left: 53%;
+        top: 47%;
+      }
+
+      & .text-pin {
+        width: 8rem;
+        left: 42%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      & .arrow-hardcover {
+        width: 10.875rem;
+        height: 1.875rem;
+        left: 50.1%;
+        top: 50%;
+      }
+
+      & .text-hardcover {
+        left: 50%;
+        top: 50%;
+        /* z-index: 0; */
+      }
+
+      &:hover {
+        & .text-bookmark {
+          transform: translate(10%, 1000%);
+        }
+
+        & .text-pin {
+          transform: translate(-260%, -10%);
+        }
+
+        & .arrow-hardcover {
+          transform: translate(-220%, -1150%);
+        }
+
+        & .text-hardcover {
+          transform: translate(-320%, -1700%);
+        }
       }
     }
   }
+
 }
