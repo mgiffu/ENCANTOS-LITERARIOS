@@ -20,6 +20,10 @@
     }
   }
 
+  & .content-kit-animation {
+    margin-block: 4rem 5.5rem;
+  }
+
   & .kit-animation {
     position: relative;
     height: 19.9375rem;
@@ -181,6 +185,10 @@
         width: 5rem;
         height: 5rem;
       }
+    }
+
+    & .content-kit-animation {
+      margin-block: 5.5rem 17.375rem;
     }
 
     & .kit-animation {

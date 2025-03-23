@@ -1,0 +1,135 @@
+#pricing {
+  & h4 {
+    text-align: center;
+  }
+
+  & .content-pricing {
+    padding: 3rem 2.72875rem 6.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & .monthly {
+      & h5 {
+        color: var(--blue-light);
+        margin-bottom: 1.5rem;
+      }
+
+      & h6 small {
+          font-size: 1rem;
+      }
+
+      & p{
+        font-size: 0.875rem;
+        color: var(--text-label);
+        margin-top: .5rem;
+      }
+
+      & .points-and-button{
+        margin-top: auto;
+
+        & ul {
+          margin-bottom:1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: .75rem;
+  
+          & li {
+            font-size: .75rem;
+            color: var(--text-label);
+            padding-left: 1.25rem;
+            background: url(../assets/princing/star-blue.svg)no-repeat left center;
+            background-size: .875rem .875rem;
+          }
+        }
+      }
+    }
+
+    & .semianual {
+      background-color: var(--shape-hover);
+      border: none;
+      & .semianual-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        & h5 {
+          color: var(--pink-light);
+        }
+
+        &  p {
+          font-size: .625rem;
+          background-color: var(--shape-stroke);
+          border-radius: 50rem;
+          padding: .5625rem 1.25rem;
+        }
+      }
+
+      & h6 small {
+          font-size: 1rem;
+      }
+
+      & p{
+        font-size: 0.875rem;
+        color: var(--text-label);
+        margin-top: .5rem;
+      }
+
+      & .points-and-button{
+        margin-top: auto;
+
+        & ul {
+          margin-bottom:1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: .75rem;
+
+          & li {
+            font-size: .75rem;
+            color: var(--text-label);
+            padding-left: 1.25rem;
+            background: url(../assets/princing/star-pink.svg)no-repeat left center;
+            background-size: .875rem .875rem;
+          }
+        }
+      }
+   }
+
+   & .yearly {
+    & h5 {
+      color: var(--blue-light);
+      margin-bottom: 1.5rem;
+    }
+
+    & h6 small {
+        font-size: 1rem;
+    }
+
+    & p{
+      font-size: 0.875rem;
+      color: var(--text-label);
+      margin-top: .5rem;
+    }
+
+    & .points-and-button{
+      margin-top: auto;
+
+      & ul {
+        margin-bottom:1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+
+        & li {
+          font-size: .75rem;
+          color: var(--text-label);
+          padding-left: 1.25rem;
+          background: url(../assets/princing/star-blue.svg)no-repeat left center;
+          background-size: .875rem .875rem;
+        }
+      }
+     }
+    }
+  }
+}

@@ -21,6 +21,16 @@ h4 {
   line-height: 140%;
 }
 
+h5 {
+  font-size: (--title-xs);
+  font-weight: 700;
+}
+
+h6 {
+  font-size: var(--title-md);
+  font-weight: 700;
+}
+
 .spellbook {
   width: 2.5rem;
   height: 2.5rem;
@@ -38,11 +48,16 @@ h4 {
 
 .button-one {
   background-color: var(--pink-dark);
-  padding: .75rem 1.25rem;
+  width: 14rem;
+  padding-block: 0.75rem;
   border-radius: .5rem;
+  font-size: .875rem;
+  text-align: center;
   
   position: relative;
   isolation: isolate;  /* cria um novo contexto de empilhamento, ajuda a controlar como os elemento se sobrepõem. Imporante quano utilizado o z-index, garantindo que o texto fique vizivel durante a animação */
+  display: inline-block; /* Importante para que o botão tenha tamanho adequado */
+  z-index: 1; /* Texto acima do pseudo-elemento */
 
   &::before {
     content: "";
@@ -63,6 +78,53 @@ h4 {
   &:hover::before {
     transform: scaleX(1);
   }
+}
+
+.button-tow {
+  background-color: var(--blue-dark);
+  width: 14rem;
+  padding-block: 0.75rem;
+  border-radius: .5rem;
+  font-size: .875rem;
+  text-align: center;
+
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  display: inline-block; /* Importante para que o botão tenha tamanho adequado */
+  z-index: 1; /* Texto acima do pseudo-elemento */
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: var(--blue-base);
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    transform: scaleX(0);
+    transition: transform 400ms ease;
+    z-index: -1;
+    }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  height: 26rem;
+  background-color: var(--shape-base);
+  border: 1px solid var(--shape-stroke);
+  border-radius: 1.25rem;
+  padding: 2rem 2rem 1.75rem 2rem;
 }
 
 

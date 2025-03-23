@@ -62,6 +62,9 @@ a {
   font-weight: 500;
 }
 
+ul[role="list"] {
+  list-style: none;
+}
 
 @media (width >= 90em) {
   :root {
