@@ -180,13 +180,32 @@
       & .monthly, .semianual, .yearly {
         position: absolute;
         margin-top: 5.125rem;
-
       }
 
       & .semianual {
         z-index: 1;
         background-color: var(--shape-hover);
         border: 1px solid var(--shape-hover);
+
+        & #bunny {
+          position: absolute;
+          top: -12.5%;
+          left: 10%;
+        }
+      }
+
+      & .monthly {
+        & #star-big-up {
+          position: absolute;
+          top: -5%;
+          left: -10%;
+        }
+
+        & #star-small-up {
+          position: absolute;
+          top: 4%;
+          left: -13%;
+        }
       }
         
       & .monthly:hover {
@@ -198,6 +217,21 @@
       & .monthly:hover ~ .semianual {
         background-color: var(--shape-base);
       }
+
+      & .yearly {
+        & #star-big-down {
+          position: absolute;
+          bottom: -2%;
+          right: -15%;
+        }
+
+        & #star-small-down {
+          position: absolute;
+          bottom: -7%;
+          right: 0%;
+        }
+      }
+        
 
       & .yearly:hover {
         background-color: var(--shape-hover);

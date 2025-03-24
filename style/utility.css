@@ -127,6 +127,9 @@ h6 {
   padding: 2rem 2rem 1.75rem 2rem;
 }
 
+.desktop-only {
+  display: none;
+}
 
 @media (width >= 90em) {
   .spellbook {
@@ -142,5 +145,9 @@ h6 {
   .crystal-ball {
     width: 4.5rem;
     height: 4.5rem;
+  }
+
+  .desktop-only {
+    display: initial;
   }
 }
