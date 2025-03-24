@@ -154,6 +154,10 @@
 @media (width >=90em) {
   #pricing {
     height: 77.125rem;
+
+    & h4 {
+      padding-top: 12.125rem;
+    }
     & .content-pricing {
       display: flex;
       flex-direction: row;
@@ -161,7 +165,6 @@
       align-items: center;
       height: 37.875rem;
       position: relative;
-
 
       &:hover .monthly,
       &:has(.monthly:hover) .monthly,
@@ -180,12 +183,14 @@
       & .monthly, .semianual, .yearly {
         position: absolute;
         margin-top: 5.125rem;
+        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
       }
 
       & .semianual {
         z-index: 1;
         background-color: var(--shape-hover);
         border: 1px solid var(--shape-hover);
+        transition: background-color 500ms ease, transform 500ms ease;
 
         & #bunny {
           position: absolute;
@@ -212,6 +217,7 @@
         background-color: var(--shape-hover); 
         transform: scale(1.05);
         z-index: 2;
+        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
       }
 
       & .monthly:hover ~ .semianual {
@@ -235,19 +241,24 @@
 
       & .yearly:hover {
         background-color: var(--shape-hover);
+        transform: scale(1.05);
         z-index: 2;
+        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
       }
 
       &:has(.yearly:hover) .semianual {
         background-color: var(--shape-base);
+        transition: background-color 500ms ease;
       }
     }
   }
 }
 
+
 @keyframes slideLeft {
   to {
     transform: rotate(-8deg) translate(-19rem, 1rem);
+    opacity: 1;
   }
 }
 
