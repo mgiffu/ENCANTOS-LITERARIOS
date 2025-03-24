@@ -162,6 +162,7 @@
       height: 37.875rem;
       position: relative;
 
+
       &:hover .monthly,
       &:has(.monthly:hover) .monthly,
       &:has(.semianual:hover) .monthly,
@@ -188,12 +189,9 @@
         border: 1px solid var(--shape-hover);
       }
         
-      }
-
       & .monthly:hover {
         background-color: var(--shape-hover); 
-        transform: rotate(-8deg) translate(-19rem, 1rem) scale(1.05); 
-        transition: transform 0.5s ease;
+        transform: scale(1.05);
         z-index: 2;
       }
 
@@ -203,18 +201,15 @@
 
       & .yearly:hover {
         background-color: var(--shape-hover);
-        transform: rotate(8deg) translate(19rem, 1rem) scale(1.05);
         z-index: 2;
       }
 
       &:has(.yearly:hover) .semianual {
         background-color: var(--shape-base);
       }
-
     }
   }
-
-
+}
 
 @keyframes slideLeft {
   to {
