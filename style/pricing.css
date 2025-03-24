@@ -1,4 +1,5 @@
 #pricing {
+  background-image: url(../assets/princing/pricing-background.png);
   & h4 {
     text-align: center;
   }
@@ -8,8 +9,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 
     & .monthly {
+      transform: scale(1);
+      transition: transform 500ms ease;
+
       & h5 {
         color: var(--blue-light);
         margin-bottom: 1.5rem;
@@ -46,8 +51,9 @@
     }
 
     & .semianual {
-      background-color: var(--shape-hover);
-      border: none;
+      transform: scale(1);
+      transition: transform 500ms ease;
+
       & .semianual-title {
         display: flex;
         justify-content: space-between;
@@ -97,6 +103,9 @@
    }
 
    & .yearly {
+    transform: scale(1);
+    transition: transform 500ms ease;
+
     & h5 {
       color: var(--blue-light);
       margin-bottom: 1.5rem;
@@ -131,5 +140,90 @@
       }
      }
     }
+
+    & .monthly:hover, .semianual:hover, .yearly:hover {
+      background-color: var(--shape-hover);
+      border: 1px solid var(--shape-hover);
+      transform: scale(1.05);
+      box-shadow: 0rem 0rem 4rem rgba(0, 25, 51, 1);
+      
+    }
+  }
+}
+
+@media (width >=90em) {
+  #pricing {
+    height: 77.125rem;
+    & .content-pricing {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 37.875rem;
+      position: relative;
+
+      &:hover .monthly,
+      &:has(.monthly:hover) .monthly,
+      &:has(.semianual:hover) .monthly,
+      &:has(.yearly:hover) .monthly {
+        animation: slideLeft 1s ease forwards;
+      }
+
+      &:hover .yearly,
+      &:has(.monthly:hover) .yearly,
+      &:has(.semianual:hover) .yearly,
+      &:has(.yearly:hover) .yearly {
+        animation: slideRight 1s ease forwards;
+      }
+
+      & .monthly, .semianual, .yearly {
+        position: absolute;
+        margin-top: 5.125rem;
+
+      }
+
+      & .semianual {
+        z-index: 1;
+        background-color: var(--shape-hover);
+        border: 1px solid var(--shape-hover);
+      }
+        
+      }
+
+      & .monthly:hover {
+        background-color: var(--shape-hover); 
+        transform: rotate(-8deg) translate(-19rem, 1rem) scale(1.05); 
+        transition: transform 0.5s ease;
+        z-index: 2;
+      }
+
+      & .monthly:hover ~ .semianual {
+        background-color: var(--shape-base);
+      }
+
+      & .yearly:hover {
+        background-color: var(--shape-hover);
+        transform: rotate(8deg) translate(19rem, 1rem) scale(1.05);
+        z-index: 2;
+      }
+
+      &:has(.yearly:hover) .semianual {
+        background-color: var(--shape-base);
+      }
+
+    }
+  }
+
+
+
+@keyframes slideLeft {
+  to {
+    transform: rotate(-8deg) translate(-19rem, 1rem);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: rotate(8deg) translate(19rem, 1rem);
   }
 }
