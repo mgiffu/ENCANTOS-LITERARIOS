@@ -11,6 +11,18 @@
     gap: 2rem;
     align-items: center;
 
+    & .cards {
+      display: flex;
+      flex-direction: column;
+      width: 18rem;
+      height: 26rem;
+      background-color: var(--shape-base);
+      border: 1px solid var(--shape-stroke);
+      border-radius: 1.25rem;
+      padding: 2rem 2rem 1.75rem 2rem;
+      transition: transform 500ms ease, background-color 500ms ease;
+    }
+
     & .monthly {
       transform: scale(1);
       transition: transform 500ms ease;
@@ -158,112 +170,125 @@
     & h4 {
       padding-top: 12.125rem;
     }
+
     & .content-pricing {
       display: flex;
-      flex-direction: row;
+      /* flex-direction: row; */
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
       height: 37.875rem;
       position: relative;
 
-      &:hover .monthly,
+      /* &:hover .monthly,
       &:has(.monthly:hover) .monthly,
       &:has(.semianual:hover) .monthly,
       &:has(.yearly:hover) .monthly {
         animation: slideLeft 1s ease forwards;
-      }
+      } */
 
-      &:hover .yearly,
+      /* &:hover .yearly,
       &:has(.monthly:hover) .yearly,
       &:has(.semianual:hover) .yearly,
       &:has(.yearly:hover) .yearly {
         animation: slideRight 1s ease forwards;
-      }
+      } */
+    }
+    
+    & .cards {
+      position: absolute;
+      transition: transform 500ms ease, background-color 500ms ease;
+    }
 
-      & .monthly, .semianual, .yearly {
+
+    & .monthly, .semianual, .yearly {
+      margin-top: 5.125rem;
+    }
+
+    & .semianual {
+      z-index: 1;
+      background-color: var(--shape-hover);
+      border: 1px solid var(--shape-hover);
+      transition: background-color 500ms ease, transform 500ms ease;
+
+      & #bunny {
         position: absolute;
-        margin-top: 5.125rem;
-        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
-      }
-
-      & .semianual {
-        z-index: 1;
-        background-color: var(--shape-hover);
-        border: 1px solid var(--shape-hover);
-        transition: background-color 500ms ease, transform 500ms ease;
-
-        & #bunny {
-          position: absolute;
-          top: -12.5%;
-          left: 10%;
-        }
-      }
-
-      & .monthly {
-        & #star-big-up {
-          position: absolute;
-          top: -5%;
-          left: -10%;
-        }
-
-        & #star-small-up {
-          position: absolute;
-          top: 4%;
-          left: -13%;
-        }
-      }
-        
-      & .monthly:hover {
-        background-color: var(--shape-hover); 
-        transform: scale(1.05);
-        z-index: 2;
-        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
-      }
-
-      & .monthly:hover ~ .semianual {
-        background-color: var(--shape-base);
-      }
-
-      & .yearly {
-        & #star-big-down {
-          position: absolute;
-          bottom: -2%;
-          right: -15%;
-        }
-
-        & #star-small-down {
-          position: absolute;
-          bottom: -7%;
-          right: 0%;
-        }
-      }
-        
-
-      & .yearly:hover {
-        background-color: var(--shape-hover);
-        transform: scale(1.05);
-        z-index: 2;
-        transition: transform 500ms ease, background-color 500ms ease, z-index 100ms ease;
-      }
-
-      &:has(.yearly:hover) .semianual {
-        background-color: var(--shape-base);
-        transition: background-color 500ms ease;
+        top: -12.5%;
+        left: 10%;
       }
     }
-  }
-}
 
+    & .monthly {
+      & #star-big-up {
+        position: absolute;
+        top: -5%;
+        left: -10%;
+        transition: transform 500ms ease;
+      }
 
-@keyframes slideLeft {
-  to {
-    transform: rotate(-8deg) translate(-19rem, 1rem);
-    opacity: 1;
-  }
-}
+      & #star-small-up {
+        position: absolute;
+        top: 4%;
+        left: -13%;
+        transition: transform 500ms ease;
+      }
+    }
 
-@keyframes slideRight {
-  to {
-    transform: rotate(8deg) translate(19rem, 1rem);
+    & .content-pricing:hover .monthly {
+      transform: rotate(-8deg) translate(-19rem, 1rem) scale(1);
+    }
+      
+    & .content-pricing:hover .monthly:hover {
+      background-color: var(--shape-hover);
+      z-index: 2;
+      transform: rotate(-8deg) translate(-19rem, 1rem) scale(1.05);
+      & #star-big-up {
+        transform: rotate(25deg);
+      }
+      & #star-small-up {
+        transform: rotate(25deg);
+      }
+    }
+
+    & .monthly:hover ~ .semianual {
+      background-color: var(--shape-base);
+    }
+
+    & .yearly {
+      & #star-big-down {
+        position: absolute;
+        bottom: -2%;
+        right: -15%;
+        transition: transform 500ms ease;
+      }
+
+      & #star-small-down {
+        position: absolute;
+        bottom: -7%;
+        right: 0%;
+        transition: transform 500ms ease;
+      }
+    }
+      
+    & .content-pricing:hover .yearly {
+      transform: rotate(8deg) translate(19rem, 1rem) scale(1);
+    }
+
+    & .content-pricing:hover .yearly:hover {
+      background-color: var(--shape-hover);
+      z-index: 2;
+      transform: rotate(8deg) translate(19rem, 1rem) scale(1.05);
+      & #star-big-down {
+        transform: rotate(25deg);
+      }
+      & #star-small-down {
+        transform: rotate(25deg);
+      }
+    }
+
+    &:has(.yearly:hover) .semianual {
+      background-color: var(--shape-base);
+      transition: background-color 500ms ease;
+    }
+    
   }
 }

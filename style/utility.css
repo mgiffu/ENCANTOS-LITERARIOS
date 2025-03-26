@@ -22,7 +22,7 @@ h4 {
 }
 
 h5 {
-  font-size: (--title-xs);
+  font-size: var(--title-xs);
   font-weight: 700;
 }
 
@@ -116,7 +116,7 @@ h6 {
   }
 }
 
-.cards {
+/* .cards {
   display: flex;
   flex-direction: column;
   width: 18rem;
@@ -125,7 +125,7 @@ h6 {
   border: 1px solid var(--shape-stroke);
   border-radius: 1.25rem;
   padding: 2rem 2rem 1.75rem 2rem;
-}
+} */
 
 .desktop-only {
   display: none;

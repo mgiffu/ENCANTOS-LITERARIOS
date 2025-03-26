@@ -23,13 +23,22 @@
 
     & .social {
       display: flex;
-      gap: 1.875rem;
+      gap: .8875rem;
       margin-inline: auto;
       margin-block: .5rem;
 
-      & img {
+      /* & img {
         width: 1.5rem;
         height: 1.5rem;
+      } */
+
+      &.instagran {
+        background: url(../assets/icons/instagram.svg);
+      }
+      & .instagran:hover {
+        background-image: url(../assets/icons/instagram-hover.svg);
+        background-color: var(--shape-stroke);
+
       }
     }
   }
@@ -56,12 +65,37 @@
 @media (width >= 90em) {
   .footer {
     width: 90em;
-    height: 25.75rem;
+    /* height: 25.75rem; */
     background-image: url(../assets/footer-desktop.png);
+    padding-inline: 10rem;
 
     display: flex;
     justify-content: space-between;
+
+    & .logo-social {
+      display: flex;
+      flex-direction: column;
+  
+      & .logo {
+        width: 16.5rem;
+        height: 4.160625rem;
+        margin-top: 10.625rem;
+      }
+  
+      & .divisor {
+      width: 16.5rem;
+      }
+      
+      & .social {
+        gap: 1.4rem;
+      }
+    }
+
+    & .content-help {
+      margin-top: 10.625rem;
+    }
   }
 
-  
+
+
 }
