@@ -27,18 +27,18 @@
       margin-inline: auto;
       margin-block: .5rem;
 
-      /* & img {
-        width: 1.5rem;
-        height: 1.5rem;
-      } */
+      & .icon {
+        border-radius: 50rem;
+        transition: background-color 500ms ease;
+        cursor: pointer;
 
-      &.instagran {
-        background: url(../assets/icons/instagram.svg);
-      }
-      & .instagran:hover {
-        background-image: url(../assets/icons/instagram-hover.svg);
-        background-color: var(--shape-stroke);
-
+        &:hover {
+          background-color: var(--shape-stroke);
+          border-radius: 50rem;
+          & .icon-hover path {
+            fill: #F8FBFB;
+          }
+        }
       }
     }
   }
@@ -57,6 +57,10 @@
       font-size: .875rem;
       color: var(--blue-light);
       margin-bottom: 1.25rem;
+
+      &:hover {
+        color: #F8FBFB;
+      }
 
     }
   }
@@ -87,7 +91,7 @@
       }
       
       & .social {
-        gap: 1.4rem;
+        gap: .3rem;
       }
     }
 
