@@ -28,9 +28,8 @@
       margin-block: .5rem;
 
       & .icon {
-        border-radius: 50rem;
-        transition: background-color 500ms ease;
-        cursor: pointer;
+        border-radius: 100rem;
+        transition: background-color 800ms ease;
 
         &:hover {
           background-color: var(--shape-stroke);
